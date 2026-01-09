@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="دكتور يحي السمان - أخصائي الاستيوباثي، علاج الآلام وتقويم العظام بأحدث الطرق الطبية" />
+  <title>دكتور يحي السمان | دكتور استيوباثي</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <style>
+    /* ========== Variables & Reset ========== */
+    :root {
+      --primary: #0077b6;
+      --primary-dark: #005a8c;
+      --secondary: #00b4d8;
+      --accent: #90e0ef;
+      --bg-light: #f8fbff;
+      --bg-dark: #0a1929;
+      --text-dark: #1a1a2e;
+      --text-light: #5c5c7a;
+      --white: #ffffff;
+      --gradient-1: linear-gradient(135deg, #0077b6 0%, #00b4d8 100%);
+      --gradient-2: linear-gradient(135deg, #00b4d8 0%, #90e0ef 100%);
+      --shadow-sm: 0 2px 8px rgba(0, 119, 182, 0.08);
+      --shadow-md: 0 8px 24px rgba(0, 119, 182, 0.12);
+      --shadow-lg: 0 16px 48px rgba(0, 119, 182, 0.16);
+      --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Cairo', sans-serif;
+      line-height: 1.8;
+      color: var(--text-dark);
+      background: var(--white);
+      overflow-x: hidden;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-padding {
+      padding: 100px 0;
+    }
+
+    /* ========== Animations ========== */
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: var(--transition);
+    }
+
+    .animate-on-scroll.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+    }
+
+    @keyframes gradient-shift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* ========== WhatsApp Float ========== */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 30px;
+      left: 30px;
+      background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+      color: white;
+      width: 65px;
+      height: 65px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 32px;
+      z-index: 1000;
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+      animation: pulse 2s infinite;
+      transition: var(--transition);
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.15);
+      box-shadow: 0 12px 32px rgba(37, 211, 102, 0.5);
+    }
+
+    /* ========== Navbar ========== */
+    .navbar {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(20px);
+      padding: 20px 0;
+      box-shadow: var(--shadow-sm);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      transition: var(--transition);
+    }
+
+    .navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: 800;
+      background: var(--gradient-1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .nav-links {
+        list-style: none;
+        
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--text-dark);
+      font-weight: 600;
+      transition: var(--transition);
+      position: relative;
+      text-decoration: none;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      right: 0;
+      width: 0;
+      height: 2px;
+      background: var(--gradient-1);
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .btn-nav {
+      background: var(--gradient-1);
+      color: white !important;
+      padding: 10px 28px;
+      border-radius: 50px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-nav:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    /* ========== Hero Section ========== */
+    .hero {
+      background: linear-gradient(135deg, #f8fbff 0%, #e8f4f8 100%);
+      padding: 120px 0 80px;
+      position: relative;
+      overflow: hidden;
+     
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(0, 180, 216, 0.1) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      right: -5%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(144, 224, 239, 0.15) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: float 8s ease-in-out infinite;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-content h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      background: var(--gradient-1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 15px;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      font-size: 1.6rem;
+      color: var(--text-light);
+      font-weight: 600;
+      margin-bottom: 25px;
+    }
+
+    .hero-p {
+      font-size: 1.15rem;
+      line-height: 2;
+      color: var(--text-light);
+      margin-bottom: 40px;
+    }
+
+    .hero-p strong {
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--gradient-1);
+      color: white;
+      padding: 16px 40px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      box-shadow: var(--shadow-lg);
+      transition: var(--transition);
+      text-decoration: none;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 20px 56px rgba(0, 119, 182, 0.25);
+    }
+
+    /* ========== Doctor Image Frame ========== */
+    .doctor-frame {
+      position: relative;
+      width: 100%;
+      max-width: 500px;
+      max-height: 700px;
+      margin: 0 auto;
+    }
+
+    .doctor-frame img {
+      width: 100%;
+      height: auto;
+      border-radius: 30px;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      z-index: 2;
+      transition: var(--transition);
+      
+    }
+
+    .doctor-frame:hover img {
+      transform: scale(1.02);
+    }
+
+    .frame-decoration {
+      position: absolute;
+      top: -25px;
+      right: -25px;
+      width: 100%;
+      height: 100%;
+      border: 3px solid var(--secondary);
+      border-radius: 30px;
+      z-index: 0;
+      transition: var(--transition);
+    }
+
+    .doctor-frame:hover .frame-decoration {
+      top: -30px;
+      right: -30px;
+    }
+
+    .doctor-frame::after {
+      content: '';
+      position: absolute;
+      bottom: -40px;
+      left: -40px;
+      width: 180px;
+      height: 180px;
+      background: radial-gradient(var(--accent) 2px, transparent 2px);
+      background-size: 20px 20px;
+      z-index: 0;
+      opacity: 0.4;
+    }
+
+    /* ========== About Section ========== */
+    .about {
+      background: var(--white);
+    }
+
+    .badge {
+      background: rgba(0, 119, 182, 0.08);
+      color: var(--primary);
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      display: inline-block;
+      margin-bottom: 20px;
+      border: 2px solid rgba(0, 119, 182, 0.15);
+    }
+
+    .about h2 {
+      font-size: 2.5rem;
+      color: var(--text-dark);
+      margin-bottom: 25px;
+      font-weight: 800;
+    }
+
+    .about p {
+      font-size: 1.1rem;
+      color: var(--text-light);
+      line-height: 2;
+      margin-bottom: 30px;
+    }
+
+    .features-list {
+      list-style: none;
+    }
+
+    .features-list li {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 25px;
+      padding: 20px;
+      background: var(--bg-light);
+      border-radius: 15px;
+      transition: var(--transition);
+      border-right: 4px solid transparent;
+    }
+
+    .features-list li:hover {
+      border-right-color: var(--primary);
+      transform: translateX(-5px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .features-list i {
+      font-size: 1.5rem;
+      color: var(--secondary);
+      margin-top: 5px;
+    }
+
+    .features-list strong {
+      display: block;
+      color: var(--primary);
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+    }
+
+    /* ========== Section Headers ========== */
+    .section-header {
+      text-align: center;
+      margin-bottom: 70px;
+    }
+
+    .section-header h2 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      margin-bottom: 15px;
+    }
+
+    .section-header p {
+      font-size: 1.2rem;
+      color: var(--text-light);
+    }
+
+    /* ========== Videos Section ========== */
+    .videos {
+      background: var(--bg-light);
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .video-card {
+      border-radius: 20px;
+      overflow: hidden;
+      background: #000;
+      aspect-ratio: 9/16;
+      transition: var(--transition);
+      box-shadow: var(--shadow-md);
+    }
+
+    .video-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .video-card video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ========== Reviews Section ========== */
+    .reviews {
+      background: var(--white);
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+    }
+
+    .review-card {
+      background: var(--bg-light);
+      padding: 35px;
+      border-radius: 20px;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      border-top: 4px solid var(--secondary);
+    }
+
+    .review-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .rating {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+    }
+
+    .review-card p {
+      font-size: 1.05rem;
+      line-height: 1.9;
+      color: var(--text-light);
+      font-style: italic;
+    }
+
+    .patient-name {
+      display: block;
+      margin-top: 20px;
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 1.05rem;
+    }
+
+    /* ========== FAQ Section ========== */
+    .faq {
+      background: var(--bg-light);
+    }
+
+    .accordion {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .accordion-item {
+      margin-bottom: 20px;
+      border-radius: 15px;
+      overflow: hidden;
+      background: var(--white);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .accordion-item:hover {
+      box-shadow: var(--shadow-md);
+    }
+
+    .accordion-header {
+      width: 100%;
+      padding: 25px 30px;
+      text-align: right;
+      background: none;
+      border: none;
+      font-family: 'Cairo';
+      font-size: 1.15rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--text-dark);
+      transition: var(--transition);
+    }
+
+    .accordion-item.active .accordion-header {
+      color: var(--primary);
+    }
+
+    .accordion-header i {
+      transition: var(--transition);
+      color: var(--primary);
+    }
+
+    .accordion-item.active .accordion-header i {
+      transform: rotate(180deg);
+    }
+
+    .accordion-body {
+      padding: 0 30px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+    }
+
+    .accordion-body p {
+      padding-bottom: 25px;
+      color: var(--text-light);
+      line-height: 1.9;
+    }
+
+    .accordion-item.active .accordion-body {
+      max-height: 300px;
+    }
+
+    /* ========== Branches Section ========== */
+    .branches {
+      background: var(--white);
+    }
+
+    .branches-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .branch-card {
+      background: linear-gradient(135deg, var(--bg-light) 0%, #fff 100%);
+      padding: 40px 30px;
+      border-radius: 20px;
+      text-align: center;
+      border: 2px solid rgba(0, 119, 182, 0.1);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .branch-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 4px;
+      background: var(--gradient-1);
+      transform: scaleX(0);
+      transition: var(--transition);
+    }
+
+    .branch-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .branch-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary);
+    }
+
+    .branch-card .icon {
+      font-size: 3rem;
+      background: var(--gradient-1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 20px;
+    }
+
+    .branch-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: var(--text-dark);
+    }
+
+    .branch-card .loc {
+      color: var(--text-light);
+      margin-bottom: 20px;
+      font-size: 0.95rem;
+    }
+
+    .branch-card .days {
+      margin-top: 15px;
+    }
+
+    .branch-card .days span {
+      display: block;
+      background: var(--bg-light);
+      padding: 8px 15px;
+      border-radius: 10px;
+      margin: 8px 0;
+      font-size: 0.9rem;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    /* ========== Booking Section ========== */
+    .booking {
+      background: var(--bg-light);
+    }
+
+    .booking-wrapper {
+      background: var(--white);
+      padding: 50px;
+      border-radius: 30px;
+      max-width: 700px;
+      margin: 0 auto;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .booking-form .input-group {
+      margin-bottom: 25px;
+    }
+
+    .booking-form label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: 700;
+      color: var(--text-dark);
+      font-size: 1.05rem;
+    }
+
+    .booking-form input,
+    .booking-form select {
+      width: 100%;
+      padding: 15px 20px;
+      border: 2px solid rgba(0, 119, 182, 0.15);
+      border-radius: 15px;
+      font-family: 'Cairo';
+      font-size: 1rem;
+      transition: var(--transition);
+      background: var(--bg-light);
+    }
+
+    .booking-form input:focus,
+    .booking-form select:focus {
+      outline: none;
+      border-color: var(--primary);
+      background: var(--white);
+    }
+
+    .btn-submit {
+      width: 100%;
+      padding: 18px;
+      background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+      color: white;
+      border: none;
+      border-radius: 15px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: 'Cairo';
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3);
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .btn-submit:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(37, 211, 102, 0.4);
+    }
+
+    /* ========== Map Section ========== */
+    .map-section {
+      padding: 0;
+    }
+
+    .container-full {
+      width: 100%;
+    }
+
+    .map-section iframe {
+      filter: grayscale(0.3);
+      transition: var(--transition);
+    }
+
+    .map-section iframe:hover {
+      filter: grayscale(0);
+    }
+
+    /* ========== Footer ========== */
+    .footer {
+      background: linear-gradient(135deg, var(--bg-dark) 0%, #0d2137 100%);
+      color: white;
+      padding: 60px 0 30px;
+      text-align: center;
+    }
+
+    .footer-logo {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 25px;
+      background: var(--gradient-2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .social-links {
+      margin: 30px 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .social-links a {
+      width: 50px;
+      height: 50px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      transition: var(--transition);
+      backdrop-filter: blur(10px);
+    }
+
+    .social-links a:hover {
+      background: var(--gradient-1);
+      transform: translateY(-5px);
+    }
+
+    .copy {
+      margin-top: 30px;
+      opacity: 0.7;
+      font-size: 0.95rem;
+    }
+
+    .dev {
+      margin-top: 15px;
+      font-size: 0.85rem;
+      opacity: 0.5;
+    }
+
+    /* ========== Responsive ========== */
+    @media (max-width: 968px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero-content h1 {
+        font-size: 2.5rem;
+      }
+
+      .doctor-frame {
+        max-width: 350px;
+        margin-top: 50px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .section-padding {
+        padding: 60px 0;
+      }
+
+      .booking-wrapper {
+        padding: 30px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+
+      .subtitle {
+        font-size: 1.2rem;
+      }
+
+      .section-header h2 {
+        font-size: 2rem;
+      }
+
+      .whatsapp-float {
+        width: 55px;
+        height: 55px;
+        font-size: 26px;
+      }
+    }
+
+     .footer-bottom {
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            opacity: 0.6;
+        }
+        
+        .developer-credit {
+            margin-top: 15px;
+            opacity: 0.8;
+            font-size: 0.95rem;
+        }
+        
+        .developer-credit a {
+            color: var(--primary-blue);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .developer-credit a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+  </style>
+</head>
+<body>
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/01145581811" class="whatsapp-float" target="_blank" aria-label="تواصل عبر واتساب">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">د. يحي السمان</div>
+      <ul class="nav-links">
+        <li><a href="#about">عن الدكتور</a></li>
+        <li><a href="#videos">المكتبة المرئية</a></li>
+        <li><a href="#reviews">آراء المرضى</a></li>
+        <li><a href="#branches">الفروع</a></li>
+        <li><a href="#booking" class="btn-nav">احجز الآن</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content animate-on-scroll">
+        <h1>دكتور يحي السمان</h1>
+        <h2 class="subtitle">أخصائي العلاج بالاستيوباثي</h2>
+        <p class="hero-p">
+          نحن لا نعالج الأعراض الظاهرة فقط، بل نبحث عن <strong>الجذر الحقيقي للألم</strong>. 
+          الاستيوباثي هو فن استعادة التوازن للجسم ليعالج نفسه بنفسه.
+        </p>
+        <div class="hero-btns">
+          <a href="#booking" class="btn-primary">ابدأ رحلة العلاج من الجذور</a>
+        </div>
+      </div>
+      <div class="hero-image animate-on-scroll">
+        <div class="doctor-frame">
+          <img src="img/dr-yahya-background.jpg" alt="دكتور يحي السمان" />
+          <div class="frame-decoration"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="about section-padding">
+    <div class="container">
+      <div class="about-text animate-on-scroll">
+        <span class="badge">لماذا الاستيوباثي؟</span>
+        <h2>لأن جسدك وحدة واحدة لا تتجزأ</h2>
+        <p>
+          يؤمن الدكتور يحي السمان أن الألم في مكان ما قد يكون مجرد "صرخة" لسبب مختبئ في مكان آخر. 
+          من خلال الاستيوباثي، نقوم بتحليل الروابط الحيوية بين الهيكل العظمي، العضلات، والأعضاء الداخلية 
+          لإعادة التناغم الوظيفي للجسم.
+        </p>
+        <ul class="features-list">
+          <li>
+            <i class="fas fa-search"></i> 
+            <div>
+              <strong>تشخيص المسبب</strong>
+              البحث عن الخلل الميكانيكي الذي أدى لظهور الألم
+            </div>
+          </li>
+          <li>
+            <i class="fas fa-hands-holding-child"></i> 
+            <div>
+              <strong>علاج يدوي شامل</strong>
+              تقنيات متطورة لتحفيز قدرة الجسم الطبيعية على الاستشفاء
+            </div>
+          </li>
+          <li>
+            <i class="fas fa-shield-heart"></i> 
+            <div>
+              <strong>وقاية مستدامة</strong>
+              تصحيح القوام وأنماط الحركة لمنع عودة المشكلة مجدداً
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Videos Section -->
+  <section id="videos" class="videos section-padding">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <h2>المكتبة المرئية</h2>
+        <p>نصائح طبية ومعلومات تهم صحتك</p>
+      </div>
+      <div class="video-grid">
+        <div class="video-card animate-on-scroll">
+         <video
+            controls
+            preload="metadata"
+            playsinline>
+            <source src="img/v1.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="video-card animate-on-scroll">
+           <video
+            controls
+            preload="metadata"
+            playsinline>
+            <source src="img/v2.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="video-card animate-on-scroll">
+            <video
+            controls
+            preload="metadata"
+            playsinline>
+            <source src="img/v3.mp4" type="video/mp4">
+            </video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section id="reviews" class="reviews section-padding">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <h2>قالوا عن التجربة</h2>
+        <p>قصص نجاح من مرضانا</p>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card animate-on-scroll">
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <p>"بجد يا دكتور تسلم إيدك، كان عندي وجع في ضهري مش بيفصل ودلوقتي بقيت واحد تاني خالص."</p>
+          <span class="patient-name">— أحمد مجدي</span>
+        </div>
+        <div class="review-card animate-on-scroll">
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <p>"فرقت معايا جداً الجلسات، دكتور شاطر ومريح جداً في التعامل وفاهم بيعمل إيه."</p>
+          <span class="patient-name">— سارة ابراهيم</span>
+        </div>
+        <div class="review-card animate-on-scroll">
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <p>"الاستيوباثي ده سحر بجد، والنتائج بانت من أول جلسة. شكراً يا دكتور يحي."</p>
+          <span class="patient-name">— محمد علي</span>
+        </div>
+        <div class="review-card animate-on-scroll">
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <p>"الدكتور ممتاز وباله طويل جداً وبيسمع للشكوى بالتفصيل، أنصح بيه أي حد تعبان."</p>
+          <span class="patient-name">— مروة حسن</span>
+        </div>
+        <div class="review-card animate-on-scroll">
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <p>"كنت فاكر إني محتاج عملية بس الحمد لله الجلسات مع دكتور يحي غيرت حياتي."</p>
+          <span class="patient-name">— هاني شاكر</span>
+        </div>
+        <div class="review-card animate-on-scroll">
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <p>"أحسن استيوباثي في مصر، معاملة راقية جداً ونتيجة فوق الوصف."</p>
+          <span class="patient-name">— دعاء ممدوح</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <section class="faq section-padding">
+  <div class="container">
+    <div class="section-header animate-on-scroll">
+      <span class="badge">إجابات طبية</span>
+      <h2>كل ما تود معرفته عن الاستيوباثي</h2>
+      <p>نؤمن أن الوعي بالمرض هو أول خطوات الشفاء</p>
+    </div>
+    <div class="accordion">
+      
+      <div class="accordion-item animate-on-scroll">
+        <button class="accordion-header">
+          <span><i class="fas fa-microscope icon-faq"></i> ما هو الاستيوباثي وكيف يختلف عن العلاج التقليدي؟</span>
+          <i class="fas fa-plus"></i>
+        </button>
+        <div class="accordion-body">
+          <p>
+            الاستيوباثي هو علم طبي شمولي لا ينظر للعرض (الألم) كعدو، بل كإشارة لوجود خلل في مكان ما. 
+            بينما يكتفي العلاج التقليدي بتسكين الألم، يبحث الاستيوباثي عن <strong>"المسبب الرئيسي"</strong>؛ 
+            فقد يكون ألم ركبتك سببه خلل في الحوض، أو صداعك منبعه مشكلة في ميكانيكا الظهر. نحن نعالج الجسم ككتلة واحدة مترابطة.
+          </p>
+        </div>
+      </div>
+
+      <div class="accordion-item animate-on-scroll">
+        <button class="accordion-header">
+          <span><i class="fas fa-hand-holding-medical icon-faq"></i> كيف يتم تشخيص "مسبب الألم" في العيادة؟</span>
+          <i class="fas fa-plus"></i>
+        </button>
+        <div class="accordion-body">
+          <p>
+            نستخدم تقنيات "الجس الطبي" (Palpation) المتطورة لتحليل مرونة الأنسجة، وحركة المفاصل، 
+            وتحليل القوام. هذا يساعدنا في اكتشاف القيود الحركية التي ترهق الجسم وتسبب الألم، ومن ثم 
+            تحرير هذه القيود ليعود الجسم لحالته الطبيعية.
+          </p>
+        </div>
+      </div>
+
+      <div class="accordion-item animate-on-scroll">
+        <button class="accordion-header">
+          <span><i class="fas fa-leaf icon-faq"></i> هل التقويم اليدوي مؤلم أو يشكل خطورة؟</span>
+          <i class="fas fa-plus"></i>
+        </button>
+        <div class="accordion-body">
+          <p>
+            على العكس تماماً، التقنيات المستخدمة دقيقة جداً ولطيفة. قد يشعر المريض بضغط بسيط 
+            أو "تعب إيجابي" يشبه الشعور بعد ممارسة الرياضة، وهو مؤشر على أن الجسم بدأ في 
+            إعادة تنظيم نفسه (Realignment). هي عملية آمنة تماماً إذا تمت على يد طبيب مختص.
+          </p>
+        </div>
+      </div>
+
+      <div class="accordion-item animate-on-scroll">
+        <button class="accordion-header">
+          <span><i class="fas fa-calendar-check icon-faq"></i> متى سأشعر بالتحسن وبكم جلسة أحتاج؟</span>
+          <i class="fas fa-plus"></i>
+        </button>
+        <div class="accordion-body">
+          <p>
+            بما أننا نعالج "المسبب"، فالتحسن غالباً ما يكون مستداماً وليس مؤقتاً. معظم المرضى يلاحظون 
+            فرقاً كبيراً من الجلسة الأولى أو الثانية. أما عدد الجلسات فيتوقف على مدى استجابة جسمك 
+            وعمر المشكلة، وهو ما نحدده بدقة في أول زيارة تشخيصية.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- Branches Section -->
+  <section id="branches" class="branches section-padding">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <h2>عياداتنا وفروعنا</h2>
+        <p>نسعد باستقبالكم في الفروع التالية</p>
+      </div>
+      <div class="branches-grid">
+        <div class="branch-card animate-on-scroll">
+          <i class="fas fa-hospital-alt icon"></i>
+          <h3>مستشفى هيلث سكوير</h3>
+          <p class="loc">المهندسين</p>
+          <div class="days">
+            <span>الأربعاء: 08:00 PM - 01:00 PM</span>
+          </div>
+        </div>
+        <div class="branch-card animate-on-scroll">
+          <i class="fas fa-clinic-medical icon"></i>
+          <h3>مستشفى زمزم</h3>
+          <p class="loc">جرجا (منطقة الأبعديه)</p>
+          <div class="days">
+            <span>الاثنين: 08:00 PM - 03:00 PM</span>
+            <span>الخميس: 08:00 PM - 03:00 PM</span>
+          </div>
+        </div>
+        <div class="branch-card animate-on-scroll">
+          <i class="fas fa-map-marker-alt icon"></i>
+          <h3>فرع البلينا</h3>
+          <p class="loc">شارع المحطة، برج التعاون الأرضي</p>
+          <div class="days">
+            <span>الأحد: 07:30 PM - 03:30 PM</span>
+          </div>
+        </div>
+        <div class="branch-card animate-on-scroll">
+          <i class="fas fa-hospital icon"></i>
+          <h3>مستشفى مصر</h3>
+          <p class="loc">سوهاج</p>
+          <div class="days">
+            <span>السبت: 05:30 PM - 10:30 AM</span>
+            <span>الثلاثاء: 04:30 PM - 11:30 AM</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Section -->
+  <section id="booking" class="booking section-padding">
+    <div class="container">
+      <div class="booking-wrapper animate-on-scroll">
+        <div class="section-header">
+          <h2>احجز موعدك الآن</h2>
+          <p>اترك بياناتك وسنتواصل معك فوراً</p>
+        </div>
+        <form id="bookingForm" class="booking-form">
+          <div class="input-group">
+            <label>الاسم الكامل</label>
+            <input type="text" id="userName" placeholder="أدخل اسمك" required />
+          </div>
+          <div class="input-group">
+            <label>رقم الهاتف</label>
+            <input type="tel" id="userPhone" placeholder="01xxxxxxxxx" required />
+          </div>
+          <div class="input-group">
+            <label>اختر الفرع</label>
+            <select id="branchSelect" required>
+              <option value="">اختر الفرع الأقرب لك</option>
+              <option value="المهندسين">المهندسين - هيلث سكوير</option>
+              <option value="جرجا">جرجا - مستشفى زمزم</option>
+              <option value="البلينا">البلينا - برج التعاون</option>
+              <option value="سوهاج">سوهاج - مستشفى مصر</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-submit">
+            تأكيد الحجز عبر واتساب <i class="fab fa-whatsapp"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">د. يحي السمان</div>
+        <div class="social-links">
+          <a href="https://www.facebook.com/Dryahya.fathy" aria-label="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="انستجرام"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="يوتيوب"><i class="fab fa-youtube"></i></a>
+        </div>
+         <div class="footer-bottom">
+                <p class="developer-credit">
+                    تم تطوير الموقع بواسطة: <a href="https://maher-atef-portfolio.vercel.app/" target="_blank" rel="noopener">مهندس/ ماهر عاطف اللبيدي</a>
+                </p>
+            </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll Animations using Intersection Observer
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.animate-on-scroll').forEach((el) => {
+      observer.observe(el);
+    });
+
+    // FAQ Accordion Logic
+    document.querySelectorAll('.accordion-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const item = header.parentElement;
+        const isActive = item.classList.contains('active');
+        
+        document.querySelectorAll('.accordion-item').forEach(el => el.classList.remove('active'));
+        
+        if (!isActive) {
+          item.classList.add('active');
+        }
+      });
+    });
+
+    // Booking Form to WhatsApp
+    document.getElementById('bookingForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const name = document.getElementById('userName').value;
+      const phone = document.getElementById('userPhone').value;
+      const branch = document.getElementById('branchSelect').value;
+      
+      const whatsappNumber = "201145581811";
+      
+      const message = `مرحباً دكتور يحي السمان، أرغب في حجز موعد استيوباثي:
+- الاسم: ${name}
+- الهاتف: ${phone}
+- الفرع: ${branch}
+شكراً لك.`;
+      
+      const encodedMessage = encodeURIComponent(message);
+      const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+      
+      window.open(whatsappUrl, '_blank');
+    });
+
+    // Navbar Scroll Effect
+    let lastScroll = 0;
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('.navbar');
+      const currentScroll = window.scrollY;
+      
+      if (currentScroll > 50) {
+        nav.style.padding = '10px 0';
+        nav.style.boxShadow = '0 4px 20px rgba(0, 119, 182, 0.15)';
+      } else {
+        nav.style.padding = '20px 0';
+        nav.style.boxShadow = '0 2px 8px rgba(0, 119, 182, 0.08)';
+      }
+      
+      lastScroll = currentScroll;
+    });
+
+    // Smooth scroll for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
